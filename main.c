@@ -1,3 +1,5 @@
+//https://www.cprogramming.com/snippets/source-code/singly-linked-list-insert-remove-add-count
+//website for reference
 #include<stdio.h>
 #include<stdlib.h>
  
