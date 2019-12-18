@@ -28,13 +28,13 @@ void display()
     struct node* temp=head;
     if(head==0)
     {
-        printf("list is empty");
+        printf("list is empty\n");
     }
     else
     {
         while(temp!=0)
         {
-            printf("%d ",temp->data);
+            printf("%d \n",temp->data);
             temp=temp->next;
         }
     }
@@ -63,7 +63,7 @@ void delete(int num)
              if(temp==head)
              {
                  head=temp->next;
-                free(temp);
+                 free(temp);
                  return 1;
              }
              else
@@ -97,6 +97,7 @@ int main()
        printf("3.Insert at end\n");
        printf("4.display\n");
        printf("5.delete\n");
+       printf("enter the option  ");
        scanf("%d",&i);
        printf("enter 1 to continue and 0 to exit  ");
        scanf("%d",&j);
@@ -112,7 +113,7 @@ int main()
                   break;
            case 4:display();
                   break;
-           case 5:printf("enter the no to insert");
+           case 5:printf("enter the no to delete");
                   scanf("%d",&num);
                   delete(num);
                   break;
