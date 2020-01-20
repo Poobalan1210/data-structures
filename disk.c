@@ -8,6 +8,7 @@ struct node
 void insert(int dno,int rad)
 {
     struct node* temp;
+    
     temp=head;
     temp = (struct node*)malloc(sizeof(struct node));
     temp->data1=dno;
@@ -22,17 +23,18 @@ void insert(int dno,int rad)
       temp->next=head;
       head=temp;
     }
-  printf("<--------------- Disk sucessfully pushed into the stack ---------------->\n\n");
+  printf("\n<--------------- Disk sucessfully pushed into the stack ---------------->\n\n");
 }
 void display()
 {
     struct node* temp;
     struct node* temp1;
     temp=head;
+    temp1=temp;
     int con,i;
     if(temp==0)
     {
-        printf("Stack is empty");
+        printf("\nStack is empty");
     }
     else
     {
@@ -52,13 +54,15 @@ void display()
             temp=temp->next;
         }
      }while(con); 
-     printf("<---stack elements are---->");
+     temp=temp1;
+     printf("\n<---stack elements are---->");
       while(temp->next!=0)
       {
-          printf("\n%d",temp->data1);
+          printf("\n %d %d",temp->data1,temp->data2);
           temp=temp->next;
       }
-      printf("\n%d",temp->data1);
+      printf("\n %d %d",temp->data1,temp->2);
+     
     }
     
 }
@@ -67,7 +71,7 @@ int main()
     int i,num1,num2,j=1;
     while(j)
     {
-        printf("Enter 1 to insert your disk in the stack \n");
+        printf("\nEnter 1 to insert your disk in the stack \n");
         printf("\nEnter 2 to display your collection of disks \n");
         scanf("%d",&i);
         printf("\nEnter your 1 to continue and 0 to exit");
