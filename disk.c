@@ -8,7 +8,6 @@ struct node
 void insert(int dno,int rad)
 {
     struct node* temp;
-    
     temp=head;
     temp = (struct node*)malloc(sizeof(struct node));
     temp->data1=dno;
@@ -19,7 +18,7 @@ void insert(int dno,int rad)
       head->next=0;
     }
     else
-    {
+   {
       temp->next=head;
       head=temp;
     }
@@ -34,7 +33,7 @@ void display()
     int con,i;
     if(temp==0)
     {
-        printf("\nStack is empty");
+        printf("\n No Disk is present in the Stack");
     }
     else
     {
@@ -44,10 +43,10 @@ void display()
         
         while(temp->next!=0)
         {
-            if(temp->data2>temp->next->data2)
+            if(temp->data2<temp->next->data2)
             {
                 i=temp->data2;
-                temp->data2=temp->next->data2;
+temp->data2=temp->next->data2;
                 temp->next->data2=i;
                 con=1;
             }
@@ -55,14 +54,13 @@ void display()
         }
      }while(con); 
      temp=temp1;
-     printf("\n<---stack elements are---->");
+     printf("\n<---Radius of the disk in increasing order is----> ");
       while(temp->next!=0)
       {
-          printf("\n Disk - %d Radius -  %d",temp->data1,temp->data2);
+          printf("%d ",temp->data2);
           temp=temp->next;
       }
-      printf("\n Disk - %d Radius - %d",temp->data1,temp->data2);
-      printf("\n <-----end----->");
+      printf("%d \n",temp->data2);
     }
     
 }
@@ -71,7 +69,7 @@ int main()
     int i,num1,num2,j=1;
     while(j)
     {
-        printf("1--Enter 1 to insert your disk in the stack \n");
+        printf("\n1--Enter 1 to insert your disk in the stack \n");
         printf("2--Enter 2 to display your collection of disks \n "); 
         printf("Enter your option to proceed further - ");
         scanf("%d",&i);
@@ -91,3 +89,4 @@ int main()
         
     }
 }
+
