@@ -58,11 +58,11 @@ void display()
      printf("\n<---stack elements are---->");
       while(temp->next!=0)
       {
-          printf("\n %d %d",temp->data1,temp->data2);
+          printf("\n Disk - %d Radius -  %d",temp->data1,temp->data2);
           temp=temp->next;
       }
-      printf("\n %d %d",temp->data1,temp->2);
-     
+      printf("\n Disk - %d Radius - %d",temp->data1,temp->data2);
+      printf("\n <-----end----->");
     }
     
 }
@@ -71,16 +71,17 @@ int main()
     int i,num1,num2,j=1;
     while(j)
     {
-        printf("\nEnter 1 to insert your disk in the stack \n");
-        printf("\nEnter 2 to display your collection of disks \n");
+        printf("1--Enter 1 to insert your disk in the stack \n");
+        printf("2--Enter 2 to display your collection of disks \n "); 
+        printf("Enter your option to proceed further - ");
         scanf("%d",&i);
-        printf("\nEnter your 1 to continue and 0 to exit");
-        scanf("%d",&j);
+        printf("\nEnter your 1 to continue and 0 to exit - ");
+        scanf("\n%d",&j);
         switch(i)
         {
-            case 1:printf("\nEnter the disc no ");
+            case 1:printf("\nEnter the disc no - ");
                    scanf("%d",&num1);
-                   printf("\nEnter the radius of the disc");
+                   printf("\nEnter the radius of the disc - ");
                    scanf("%d",&num2);
                    insert(num1,num2);
                    break;
